@@ -1,0 +1,140 @@
+.main-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: sans-serif;
+  color: #475569;
+}
+
+.card {
+  background-color: white;
+  width: 100%;
+  max-width: 370px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  margin: 0 -15px;
+  cursor: default;
+  transition: background-color 0.2s ease;
+}
+
+.row-item:hover {
+  background-color: #f9fafb;
+}
+
+.row-item:active {
+  background-color: rgba(100, 197, 253, 0.5);
+}
+
+.row-item:hover .custom-checkbox {
+  border-color: #b0b0b0;
+}
+
+.row-item:hover .custom-checkbox:not(:checked)::after {
+  display: block;
+  border-color: rgba(227, 227, 227, 1);
+}
+
+.label-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #334155;
+  cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.spacer {
+  margin-bottom: 15px;
+}
+
+.btn-done {
+  width: 340px;
+  height: 40px;
+  background-color: rgba(255, 206, 34, 1);
+  color: #1e293b;
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: center;
+}
+
+.btn-done:hover {
+  background-color: rgba(255, 216, 77, 1);
+}
+
+.btn-done:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fde047;
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.custom-checkbox:hover {
+  border-color: #b0b0b0;
+}
+
+.custom-checkbox:checked {
+  background-color: rgba(36, 105, 246, 1);
+  border-color: rgba(36, 105, 246, 1);
+}
+
+.custom-checkbox:checked:hover {
+  background: rgba(80, 135, 248, 1);
+}
+
+.custom-checkbox::after {
+  content: "";
+  display: none;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.custom-checkbox:checked::after {
+  display: block;
+  border-color: white;
+}
+
+.custom-checkbox:not(:checked):hover::after {
+  display: block;
+  border-color: rgba(227, 227, 227, 1);
+}
